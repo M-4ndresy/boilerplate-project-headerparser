@@ -25,7 +25,6 @@ app.get('/api/hello', function (req, res) {
 });
 app.get('/api/whoami', function (req, res,next) {
 const client = req.headers
-console.log('client:', client['accept-language'])
 res.json({ipaddress:client.host,language:client["accept-language"],software:client["user-agent"]})
 next()
 });
